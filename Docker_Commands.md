@@ -1,6 +1,7 @@
 # 🐳 Docker Cheatsheet
 
 This cheatsheet summarizes essential Docker commands for quick reference, grouped by function.
+Creaded by Eng.Andrew Adel
 
 ---
 
@@ -47,7 +48,6 @@ Commands for running commands inside or exchanging data with a container.
 | Command | Description |
 | :--- | :--- |
 | `docker exec [container] [command]` | Run a command in an existing container (useful for debugging) |
-| `docker attach [container]` | Attach to a running container (stdin/stdout/stderr) |
 | `docker cp [container]:[path] [hostpath]` | Copy files **from** the container to the host |
 | `docker cp [hostpath] [container]:[path]` | Copy files **into** the container from the host |
 | `docker export [container]` | Export the content of the container (tar archive) |
@@ -55,48 +55,13 @@ Commands for running commands inside or exchanging data with a container.
 
 ---
 
-## 🫙 Image Management
+## 🏗️ Image Management
 
-Commands for viewing, tagging, and cleaning up local images.
+Commands for viewing, tagging and cleaning up local images.
 
 | Command | Description |
 | :--- | :--- |
 | `docker images` | List all local images |
 | `docker rmi [image]` | Delete one or more images |
 | `docker history [image]` | Show the image history (list of ancestors) |
-| `docker inspect [image]` | Show level-info's (in json format) |
-| `docker tag [source_image] [target_image]` | Tag an image with a new name/tag |
-| `docker import [tarball]` | Create an image from a tarball |
-
----
-
-## 🧪 Image Transfer
-
-Commands for moving images to and from a registry or manually.
-
-| Command | Description |
-| :--- | :--- |
-| `docker login` | Log in to a registry |
-| `docker logout` | Log out from a registry |
-| `docker search [text]` | Search an image on the official registry |
-| `docker save [repo]` | Export an image/repo as a tarball |
-| `docker load` | Load images from a tarball |
-
----
-
-## 🏗️ Dockerfile Instructions
-
-These are commands used *inside* a **Dockerfile** to build an image.
-
-| Instruction | Description |
-| :--- | :--- |
-| `FROM [image]` | Base image for the build |
-| `RUN [args]` | Run an arbitrary command inside the container |
-| `CMD [args]` | Set the default command to execute when a container starts |
-| `ENTRYPOINT [args]` | Configure a container that will run as an executable |
-| `COPY [src] [dst]` | Copy path from the context into the container |
-| `ADD [src] [dst]` | Same as COPY, but untars archives and accepts HTTPS URLs |
-| `WORKDIR [path]` | Set the default working directory |
-| `ENV [name] [value]` | Set an environment variable |
-| `USER [name]` | Set the default username |
-| `MAINTAINER [email]` | Name of the maintainer (metadata) |
+| `docker inspect [image]` | Show info's (in json format) |
