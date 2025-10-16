@@ -1,7 +1,8 @@
 # 🐳 Docker Cheatsheet
 
 This cheatsheet summarizes essential Docker commands for quick reference, grouped by function.
-Creaded by Eng.Andrew Adel
+--
+Creaded by Eng. Andrew Adel
 
 ---
 
